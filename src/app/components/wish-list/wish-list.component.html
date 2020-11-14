@@ -1,0 +1,21 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "md-col-4 mt-4 offset-md-4">
+            <h1>Wish List</h1>
+        </div>
+    </div>
+    <div class = "row card-group">
+        <div class = "col-lg-4 mt-4 mb-4" *ngFor = "let item of items; let i = index">
+            <div class="card h-100 text-white bg-secondary mb-3" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+                </div>
+                <div class = "card-body text-center">
+                    <img class="img-fluid" src="{{item.imageLink}}" alt="Card image cap">
+                </div>
+                <button routerLink = "../shopping-cart" class="btn btn-danger" (click) = "deleteItem(i)">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

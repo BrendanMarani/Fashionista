@@ -1,0 +1,30 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-4 offset-md-4 d-flex justify-content-center mt-4">
+            <h1 text-center>Update Item</h1>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-4 offset-md-4 d-flex justify-content-center mt-4">
+            <form [formGroup] = 'updateItemForm' (ngSubmit) = 'updateItem()'>
+                <div class = "form-group">
+                    <label for = "name">Current Item Name </label>
+                    <input class = "form-control" type = 'text' formControlName = 'cname'>
+                </div>
+                <div class = "form-group">
+                    <label for = "name">New Item Name </label>
+                    <input class = "form-control" type = 'text' formControlName = 'nname'>
+                </div>
+                <div class = "form-group">
+                    <label for = "price">New Price </label>
+                    <input class = "form-control" type = 'text' formControlName = 'nprice'>
+                </div>
+                <div class = "form-group">
+                    <label for = "imageLink">New Image Source </label>
+                    <input class = "form-control" type = 'text' formControlName = 'nimageLink'>
+                </div>
+                <button class = "btn btn-primary btn-block">Add Item</button>
+            </form>
+        </div>
+    </div>
+</div>
